@@ -1,5 +1,5 @@
 import winston from "winston";
-import { getCorrelationId } from "../utils/helpers/request.helpers";
+// import { getCorrelationId } from "../utils/helpers/request.helpers";
 import DailyRotateFile from "winston-daily-rotate-file";
 
 const logger = winston.createLogger({
@@ -12,7 +12,7 @@ const logger = winston.createLogger({
                 level,
                 message, 
                 timestamp, 
-                correlationId: getCorrelationId(), 
+                // correlationId: getCorrelationId(), 
                 data 
             };
             return JSON.stringify(output);
