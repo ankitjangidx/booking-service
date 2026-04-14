@@ -1,0 +1,5 @@
+import { v7 as uuidv7} from "uuid";
+
+export const generateIdempotencyKey = (): string => {
+  return uuidv7();
+};

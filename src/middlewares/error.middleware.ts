@@ -5,10 +5,10 @@ export const appErrorHandler = (err: AppError, req: Request, res: Response, next
 
     console.log(err);
 
-    res.status(err.statusCode).json({
-        success: false,
-        message: err.message
-    });
+        res.status(err.statusCode).json({
+            success: false,
+            message: err.message
+        });
 }
 
 export const genericErrorHandler = (err: Error, req: Request, res: Response, next: NextFunction) => {
