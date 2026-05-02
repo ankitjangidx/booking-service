@@ -16,8 +16,8 @@ model Booking {
   totalGuests    Int
   status         bookingStatus   @default(PENDING)
   idempotencyKey IdempotencyKey?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
 }
 
 enum bookingStatus {
@@ -28,7 +28,7 @@ enum bookingStatus {
 
 model IdempotencyKey {
   id        Int      @id @default(autoincrement())
-  key       String   @unique
+  idemKey   String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   bookingId Int      @unique

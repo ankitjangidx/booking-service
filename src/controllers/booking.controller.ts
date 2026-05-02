@@ -10,7 +10,7 @@ export async function createBookingHandler(req: Request, response: Response) {
   const booking = await createBookingService(req.body);
   response.status(201).json({
     bookingId: booking.bookingId,
-    idempotencyKey: booking.idempotencyKeyId,
+    idempotencyKey: booking.idempotencyKey,
   });
 }
 export async function confirmBookingHandler(req: Request, res: Response) {
